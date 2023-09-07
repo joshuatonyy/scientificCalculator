@@ -13,7 +13,7 @@ struct scientificCalculatorApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BasicCalculatorView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
