@@ -14,11 +14,11 @@ struct ScientificCalculatorView: View {
             VStack(spacing: 11) {
                 Spacer()
                 HStack{
-                    InputtedValue()
+//                    InputtedValue()
                 }
                 .padding(.horizontal, 9)
                 ZStack {
-                    ScientificCalculatorButtonLayout()
+//                    ScientificCalculatorButtonLayout()
                 }
                 .foregroundColor(.clear)
                 .frame(width: 393, height: 536)

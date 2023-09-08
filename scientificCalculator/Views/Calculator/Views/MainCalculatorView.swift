@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainCalculatorView: View {
     @State var defaultType: String = "Basic"
+    @StateObject var basicCalculatorViewModel = BasicCalculatorViewModel()
     
     var body: some View {
         NavigationView{
@@ -23,7 +24,7 @@ struct MainCalculatorView: View {
                 }
                 Spacer()
             }
-        }
+        }.environmentObject(basicCalculatorViewModel)
     }
 }
 

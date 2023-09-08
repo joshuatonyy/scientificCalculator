@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct BasicCalculatorView: View {
+    @State var value = "0"
+//    @Binding var tappedButton: String
+    @StateObject var basicCalculatorViewModel = BasicCalculatorViewModel()
+    
     var body: some View {
         ZStack {
             Color(red: 0.15, green: 0.15, blue: 0.15)
             VStack(spacing: 11) {
                 Spacer()
                 HStack{
-                    InputtedValue()
+                    InputtedValue(basicCalculatorViewModel: basicCalculatorViewModel)
                 }
                 .padding(.horizontal, 9)
                 ZStack {
-                    BasicCalculatorButtonLayout()
+                    BasicCalculatorButtonLayout( basicCalculatorViewModel: basicCalculatorViewModel)
                 }
                 .foregroundColor(.clear)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InputtedValue: View {
+    @ObservedObject var basicCalculatorViewModel: BasicCalculatorViewModel
+    
     var body: some View {
         ZStack{
             Rectangle()
@@ -26,7 +28,8 @@ struct InputtedValue: View {
                     .bold()
                     .foregroundColor(Color(red: 0.04, green: 0.52, blue: 1))
                 Spacer()
-                Text("12-4+70-15x27")
+                //MARK: Output
+                Text(basicCalculatorViewModel.shownValue)
                     .font(.system(size: 18).weight(.medium))
                     .multilineTextAlignment(.trailing)
                     .foregroundColor(.white)
@@ -39,6 +42,6 @@ struct InputtedValue: View {
 
 struct InputtedValue_Previews: PreviewProvider {
     static var previews: some View {
-        InputtedValue()
+        InputtedValue(basicCalculatorViewModel: BasicCalculatorViewModel())
     }
 }

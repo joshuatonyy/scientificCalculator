@@ -27,6 +27,9 @@
 		424911CE2AA78687004357AC /* BasicCalculatorButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424911CD2AA78687004357AC /* BasicCalculatorButtonLayout.swift */; };
 		424911D22AA78D0F004357AC /* CornerRadiusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424911D12AA78D0F004357AC /* CornerRadiusExtension.swift */; };
 		424911D42AA78EDA004357AC /* ScientificCalculatorButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424911D32AA78EDA004357AC /* ScientificCalculatorButtonLayout.swift */; };
+		424911F32AAA10DA004357AC /* BasicCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424911F22AAA10DA004357AC /* BasicCalculatorViewModel.swift */; };
+		424911F52AAA10E6004357AC /* ScientificCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424911F42AAA10E6004357AC /* ScientificCalculatorViewModel.swift */; };
+		424911F82AAA2C49004357AC /* BasicCalculatorButtonCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424911F72AAA2C49004357AC /* BasicCalculatorButtonCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		424911CD2AA78687004357AC /* BasicCalculatorButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCalculatorButtonLayout.swift; sourceTree = "<group>"; };
 		424911D12AA78D0F004357AC /* CornerRadiusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusExtension.swift; sourceTree = "<group>"; };
 		424911D32AA78EDA004357AC /* ScientificCalculatorButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificCalculatorButtonLayout.swift; sourceTree = "<group>"; };
+		424911F22AAA10DA004357AC /* BasicCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCalculatorViewModel.swift; sourceTree = "<group>"; };
+		424911F42AAA10E6004357AC /* ScientificCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificCalculatorViewModel.swift; sourceTree = "<group>"; };
+		424911F72AAA2C49004357AC /* BasicCalculatorButtonCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCalculatorButtonCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 		424911B42AA76844004357AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				424911F62AAA2C37004357AC /* Calculator */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 		424911B62AA7684E004357AC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				424911F12AAA0FCE004357AC /* Calculator */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -259,6 +267,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		424911F12AAA0FCE004357AC /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				424911F22AAA10DA004357AC /* BasicCalculatorViewModel.swift */,
+				424911F42AAA10E6004357AC /* ScientificCalculatorViewModel.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		424911F62AAA2C37004357AC /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				424911F72AAA2C49004357AC /* BasicCalculatorButtonCategory.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -336,15 +361,18 @@
 				424911CE2AA78687004357AC /* BasicCalculatorButtonLayout.swift in Sources */,
 				424911A22AA76742004357AC /* scientificCalculator.xcdatamodeld in Sources */,
 				4249119F2AA76742004357AC /* Persistence.swift in Sources */,
+				424911F32AAA10DA004357AC /* BasicCalculatorViewModel.swift in Sources */,
 				424911982AA76741004357AC /* ContentView.swift in Sources */,
 				424911C82AA77B68004357AC /* MainCalculatorView.swift in Sources */,
 				424911D42AA78EDA004357AC /* ScientificCalculatorButtonLayout.swift in Sources */,
 				424911C22AA76BA3004357AC /* BasicCalculatorView.swift in Sources */,
 				16097EF52AAA0F6C00BD9DB8 /* MainTabView.swift in Sources */,
+				424911F52AAA10E6004357AC /* ScientificCalculatorViewModel.swift in Sources */,
 				424911D22AA78D0F004357AC /* CornerRadiusExtension.swift in Sources */,
 				424911962AA76741004357AC /* scientificCalculatorApp.swift in Sources */,
 				424911CA2AA78010004357AC /* InputtedValue.swift in Sources */,
 				16097EF12AAA0F3800BD9DB8 /* HomePageView.swift in Sources */,
+				424911F82AAA2C49004357AC /* BasicCalculatorButtonCategory.swift in Sources */,
 				16097EF32AAA0F5100BD9DB8 /* RecommendCard.swift in Sources */,
 				424911CC2AA7849D004357AC /* CalculatorButton.swift in Sources */,
 			);

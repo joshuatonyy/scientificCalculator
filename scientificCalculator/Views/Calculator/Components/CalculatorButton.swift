@@ -11,7 +11,10 @@ struct CalculatorButton: View {
     var buttonColor: Color = Color(red: 0.04, green: 0.52, blue: 1)
     var blackFont: Bool = false
     var imageButton: Bool = false
-    var buttonInput: String = "AC"
+    var buttonInput: BasicCalculatorButtonCategory = .clear
+    
+    @ObservedObject var basicCalculatorViewModel: BasicCalculatorViewModel
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -25,16 +28,19 @@ struct CalculatorButton: View {
                     .font(.system(size: 24).weight(.bold))
                     .foregroundColor(blackFont ? Color.black: Color.white)
             } else {
-                Text(buttonInput)
+                Text(buttonInput.rawValue)
                     .font(.system(size: 24).weight(.bold))
                     .foregroundColor(blackFont ? Color.black: Color.white)
             }
+        }
+        .onTapGesture {
+            basicCalculatorViewModel.didTap(button: buttonInput)
         }
     }
 }
 
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButton()
+        CalculatorButton(basicCalculatorViewModel: .init())
     }
 }
