@@ -19,7 +19,7 @@ struct BasicCalculatorButtonLayout: View {
                 CalculatorButton(buttonColor: Color(red: 0.91, green: 0.91, blue: 0.91), blackFont: true, buttonInput: .eight, basicCalculatorViewModel: basicCalculatorViewModel)
                 CalculatorButton(buttonColor: Color(red: 0.91, green: 0.91, blue: 0.91), blackFont: true, buttonInput: .nine, basicCalculatorViewModel: basicCalculatorViewModel)
                 CalculatorButton(basicCalculatorViewModel: basicCalculatorViewModel)
-                CalculatorButton(imageButton: true, basicCalculatorViewModel: basicCalculatorViewModel)
+                CalculatorButton(buttonInput: .delete, basicCalculatorViewModel: basicCalculatorViewModel)
             }
             HStack(spacing: 15){
                 CalculatorButton(buttonColor: Color(red: 0.91, green: 0.91, blue: 0.91), blackFont: true, buttonInput: .four, basicCalculatorViewModel: basicCalculatorViewModel)

@@ -27,4 +27,5 @@ enum BasicCalculatorButtonCategory: String {
     case decimal = "."
     case percent = "%"
     case negative = "±"
+    case delete = "⌦"
 }

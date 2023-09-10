@@ -22,14 +22,15 @@ class BasicCalculatorViewModel: ObservableObject {
     
     func didTap(button: BasicCalculatorButtonCategory){
         switch button {
-        case .add, .subtract, .multiply, .divide:
+        case .add, .subtract, .percent, .divide, .multiply:
             addOperator(button.rawValue)
         case .equal:
             result = calculateResults()
         case .clear:
-//            shownValue = String(shownValue.dropLast())
             shownValue = "0"
             result = ""
+        case .delete:
+            shownValue = String(shownValue.dropLast())
         case .negative:
             addMinus()
         default:
@@ -45,7 +46,7 @@ class BasicCalculatorViewModel: ObservableObject {
         objectWillChange.send()
     }
     
-    func addOperator(_ cell : String)
+    func addOperator(_ button : String)
     {
         if !shownValue.isEmpty
         {
@@ -54,7 +55,7 @@ class BasicCalculatorViewModel: ObservableObject {
             {
                 shownValue.removeLast()
             }
-            shownValue += cell
+            shownValue += button
         }
     }
     
@@ -74,7 +75,8 @@ class BasicCalculatorViewModel: ObservableObject {
         if(validInput())
         {
             var workings = shownValue.replacingOccurrences(of: "%", with: "*0.01")
-            workings = workings.replacingOccurrences(of: "X", with: "*")
+            workings = workings.replacingOccurrences(of: "×", with: "*")
+            workings = workings.replacingOccurrences(of: "÷", with: "/")
             let expression = NSExpression(format: workings)
             let result = expression.expressionValue(with: nil, context: nil) as! Double
             return formatResult(val: result)
@@ -91,16 +93,19 @@ class BasicCalculatorViewModel: ObservableObject {
         }
         let last = String(shownValue.last!)
         
+        if(operators.contains(last) || last == "-")
+        {
+            if(last != "%" || shownValue.count == 1)
+            {
+                return false
+            }
+        }
+        
         return true
     }
     
     func formatResult(val : Double) -> String
     {
-        if(val.truncatingRemainder(dividingBy: 1) == 0)
-        {
-            return String(format: "%.0f", val)
-        }
-        
         return String(format: "%.2f", val)
     }
 }
