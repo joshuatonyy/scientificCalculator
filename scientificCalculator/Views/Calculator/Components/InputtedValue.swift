@@ -11,31 +11,43 @@ struct InputtedValue: View {
     @ObservedObject var basicCalculatorViewModel: BasicCalculatorViewModel
     
     var body: some View {
-        ZStack{
-            Rectangle()
-                .foregroundColor(.clear)
-                .frame(maxWidth: .infinity, maxHeight: 48)
-                .background(.black)
-                .cornerRadius(25)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 25)
-                    .inset(by: 0.5)
-                    .stroke(.black, lineWidth: 1)
-                )
+        VStack {
             HStack{
-                Image(systemName: "clock.arrow.circlepath")
-                    .font(.system(size: 28))
-                    .bold()
-                    .foregroundColor(Color(red: 0.04, green: 0.52, blue: 1))
                 Spacer()
-                //MARK: Output
-                Text(basicCalculatorViewModel.shownValue)
-                    .font(.system(size: 18).weight(.medium))
+                Text(basicCalculatorViewModel.result)
                     .multilineTextAlignment(.trailing)
+                    .font(.system(size: 70).weight(.bold))
                     .foregroundColor(.white)
-                    .frame(width: 150, height: 16, alignment: .trailing)
+                    .frame(width: 240, height: 93, alignment: .trailing)
             }
-            .padding(.horizontal, 11)
+            ZStack{
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(maxWidth: .infinity, maxHeight: 48)
+                    .background(.black)
+                    .cornerRadius(25)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 25)
+                        .inset(by: 0.5)
+                        .stroke(.black, lineWidth: 1)
+                    )
+                HStack{
+                    Image(systemName: "clock.arrow.circlepath")
+                        .font(.system(size: 28))
+                        .bold()
+                        .foregroundColor(Color(red: 0.04, green: 0.52, blue: 1))
+                    Spacer()
+                    //MARK: Output
+                    Text(basicCalculatorViewModel.shownValue)
+                        .font(.system(size: 18).weight(.medium))
+                        .multilineTextAlignment(.trailing)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding(.vertical)
+                    
+                }
+                .padding(.horizontal, 11)
+            }
         }
     }
 }
