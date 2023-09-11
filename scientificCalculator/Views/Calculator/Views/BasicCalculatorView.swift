@@ -11,7 +11,6 @@ struct BasicCalculatorView: View {
     @State var value = "0"
 //    @Binding var tappedButton: String
     @StateObject var basicCalculatorViewModel = BasicCalculatorViewModel()
-    
     var body: some View {
         ZStack {
             Color(red: 0.15, green: 0.15, blue: 0.15)
@@ -46,3 +45,4 @@ extension View {
         ModifiedContent(content: self, modifier: CornerRadiusStyle(radius: radius, corners: corners))
     }
 }
+
