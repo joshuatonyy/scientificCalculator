@@ -12,6 +12,9 @@
 		16097EF12AAA0F3800BD9DB8 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16097EF02AAA0F3800BD9DB8 /* HomePageView.swift */; };
 		16097EF32AAA0F5100BD9DB8 /* RecommendCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16097EF22AAA0F5100BD9DB8 /* RecommendCard.swift */; };
 		16097EF52AAA0F6C00BD9DB8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16097EF42AAA0F6C00BD9DB8 /* MainTabView.swift */; };
+		161AB5532AB0B2A100FC2B98 /* ScientificCalculatorButtonCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AB5522AB0B2A100FC2B98 /* ScientificCalculatorButtonCategory.swift */; };
+		161AB5552AB0BCFF00FC2B98 /* ScientificCalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AB5542AB0BCFF00FC2B98 /* ScientificCalculatorButton.swift */; };
+		161AB5572AB0C07A00FC2B98 /* ScientificInputtedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AB5562AB0C07A00FC2B98 /* ScientificInputtedValue.swift */; };
 		424911962AA76741004357AC /* scientificCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424911952AA76741004357AC /* scientificCalculatorApp.swift */; };
 		424911982AA76741004357AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424911972AA76741004357AC /* ContentView.swift */; };
 		4249119A2AA76742004357AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424911992AA76742004357AC /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		16097EF02AAA0F3800BD9DB8 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		16097EF22AAA0F5100BD9DB8 /* RecommendCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCard.swift; sourceTree = "<group>"; };
 		16097EF42AAA0F6C00BD9DB8 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		161AB5522AB0B2A100FC2B98 /* ScientificCalculatorButtonCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificCalculatorButtonCategory.swift; sourceTree = "<group>"; };
+		161AB5542AB0BCFF00FC2B98 /* ScientificCalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificCalculatorButton.swift; sourceTree = "<group>"; };
+		161AB5562AB0C07A00FC2B98 /* ScientificInputtedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificInputtedValue.swift; sourceTree = "<group>"; };
 		424911922AA76741004357AC /* scientificCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scientificCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		424911952AA76741004357AC /* scientificCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scientificCalculatorApp.swift; sourceTree = "<group>"; };
 		424911972AA76741004357AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -260,7 +266,9 @@
 			children = (
 				424911C32AA76BB1004357AC /* CustomAppBar.swift */,
 				424911C92AA78010004357AC /* InputtedValue.swift */,
+				161AB5562AB0C07A00FC2B98 /* ScientificInputtedValue.swift */,
 				424911CB2AA7849D004357AC /* CalculatorButton.swift */,
+				161AB5542AB0BCFF00FC2B98 /* ScientificCalculatorButton.swift */,
 				424911CD2AA78687004357AC /* BasicCalculatorButtonLayout.swift */,
 				424911D32AA78EDA004357AC /* ScientificCalculatorButtonLayout.swift */,
 			);
@@ -280,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				424911F72AAA2C49004357AC /* BasicCalculatorButtonCategory.swift */,
+				161AB5522AB0B2A100FC2B98 /* ScientificCalculatorButtonCategory.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -370,7 +379,10 @@
 				424911F52AAA10E6004357AC /* ScientificCalculatorViewModel.swift in Sources */,
 				424911D22AA78D0F004357AC /* CornerRadiusExtension.swift in Sources */,
 				424911962AA76741004357AC /* scientificCalculatorApp.swift in Sources */,
+				161AB5532AB0B2A100FC2B98 /* ScientificCalculatorButtonCategory.swift in Sources */,
+				161AB5552AB0BCFF00FC2B98 /* ScientificCalculatorButton.swift in Sources */,
 				424911CA2AA78010004357AC /* InputtedValue.swift in Sources */,
+				161AB5572AB0C07A00FC2B98 /* ScientificInputtedValue.swift in Sources */,
 				16097EF12AAA0F3800BD9DB8 /* HomePageView.swift in Sources */,
 				424911F82AAA2C49004357AC /* BasicCalculatorButtonCategory.swift in Sources */,
 				16097EF32AAA0F5100BD9DB8 /* RecommendCard.swift in Sources */,

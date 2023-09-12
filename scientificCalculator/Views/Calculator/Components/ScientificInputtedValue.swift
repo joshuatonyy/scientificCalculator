@@ -1,20 +1,20 @@
 //
-//  InputtedValue.swift
+//  ScientificInputtedValue.swift
 //  scientificCalculator
 //
-//  Created by Joshua on 05/09/23.
+//  Created by Devin Maleke on 12/09/23.
 //
 
 import SwiftUI
 
-struct InputtedValue: View {
-    @ObservedObject var basicCalculatorViewModel: BasicCalculatorViewModel
+struct ScientificInputtedValue: View {
+    @ObservedObject var scientificCalculatorViewModel: ScientificCalculatorViewModel
     
     var body: some View {
         VStack {
             HStack{
                 Spacer()
-                Text(basicCalculatorViewModel.result)
+                Text(scientificCalculatorViewModel.result)
                     .multilineTextAlignment(.trailing)
                     .font(.system(size: 50).weight(.bold))
                     .foregroundColor(.white)
@@ -39,7 +39,7 @@ struct InputtedValue: View {
                         .foregroundColor(Color(red: 0.04, green: 0.52, blue: 1))
                     Spacer()
                     //MARK: Output
-                    Text(basicCalculatorViewModel.shownValue)
+                    Text(scientificCalculatorViewModel.shownValue)
                         .font(.system(size: 18).weight(.medium))
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(.white)
@@ -53,8 +53,9 @@ struct InputtedValue: View {
     }
 }
 
-struct InputtedValue_Previews: PreviewProvider {
+struct ScientificInputtedValue_Previews: PreviewProvider {
     static var previews: some View {
-        InputtedValue(basicCalculatorViewModel: BasicCalculatorViewModel())
+        ScientificInputtedValue(scientificCalculatorViewModel: ScientificCalculatorViewModel())
     }
 }
+
